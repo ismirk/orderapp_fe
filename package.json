@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "start": "vite preview --port $PORT --host"
+    "start": "serve dist -l $PORT"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
@@ -17,6 +16,7 @@
   },
   "dependencies": {
     "@sveltejs/kit": "^2.21.2",
-    "date-fns": "^4.1.0"
+    "date-fns": "^4.1.0",
+    "serve": "^14.2.4"
   }
 }

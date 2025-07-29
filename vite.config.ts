@@ -25,10 +25,6 @@ export default defineConfig({
       }
     }
   },
-  preview: {
-    port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
-    host: true
-  },
   // Build configuration for production
   build: {
     outDir: 'dist',

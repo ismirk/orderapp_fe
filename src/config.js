@@ -1,8 +1,7 @@
 // API Configuration
 export const API_CONFIG = {
   // Use environment variable for production, fallback to localhost for development
-  // BASE_URL: import.meta.env.VITE_API_URL || '',
-  BASE_URL: 'https://order-entry-backend-production.up.railway.app',
+  BASE_URL: import.meta.env.VITE_API_URL || '',
   
   // API endpoints
   ENDPOINTS: {
@@ -20,9 +19,7 @@ export const buildApiUrl = (endpoint) => {
 
 // Helper function to make API calls
 export const apiCall = async (endpoint, options = {}) => {
-  console.log('API_CONFIG.BASE_URL (DEBUG):', API_CONFIG.BASE_URL);
-  const url = buildApiUrl(endpoint);
-  
+  const url = buildApiUrl(endpoint);  
   try {
     console.log('API call (DEBUG):', url, options);
     const response = await fetch(url, options);
